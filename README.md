@@ -21,16 +21,9 @@
 
 It also exposes a synchronous embedding endpoint used by `face-recognition-api` when an employee photo is created or updated, so the same model powers both enrollment and recognition.
 
-```
-face-recognition-edge ──(RabbitMQ: face_events / face.detected)──▶ face-recognition-server
-                                                                          │
-                                          Redis "face:vectors" ◀─────────┤ (lookup)
-                                                                          │
-                                                  cosine similarity match │
-                                                                          ▼
-                                                              face-recognition-api
-                                                              POST /api/transactions
-```
+## Architecture
+
+![Architecture](https://github.com/user-attachments/assets/2165c554-ce6b-48ec-a9ba-2e551862e2b5)
 
 ---
 
