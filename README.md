@@ -97,8 +97,8 @@ All configuration is via environment variables (see `app/core/config.py`):
 ### Prerequisites
 
 - Python 3.11+
-- Running Redis + RabbitMQ (e.g. via [`face-recognition-infra`](../face-recognition-infra))
-- A reachable [`face-recognition-api`](../face-recognition-api) instance
+- Running Redis + RabbitMQ (e.g. via [`face-recognition-infra`](https://github.com/Putthakun/face-recognition-infrastructure))
+- A reachable [`face-recognition-api`](https://github.com/Putthakun/face-recognition-api) instance
 
 ### Run locally
 
@@ -129,11 +129,11 @@ pytest tests/
 
 ## Related Services
 
-This service is part of a larger system. See [`real-time-face-recognition-attendance-system`](../real-time-face-recognition-attendance-system) for the full architecture overview.
+This service is part of a larger system. See [`real-time-face-recognition-attendance-system`](https://github.com/Putthakun/real-time-face-recognition-attendance-system) for the full architecture overview.
 
 | Repo | Role |
 |---|---|
-| [`face-recognition-edge`](../face-recognition-edge) | Captures video, detects faces (YOLOv8), publishes crops to RabbitMQ |
-| [`face-recognition-api`](../face-recognition-api) | System of record — employees, cameras, transactions, auth |
-| [`face-recognition-web`](../face-recognition-web) | Vue 3 dashboard for admins/supervisors |
-| [`face-recognition-infra`](../face-recognition-infra) | Shared SQL Server, Redis, RabbitMQ via Docker Compose |
+| [`face-recognition-edge`](https://github.com/Putthakun/face-recognition-edge) | Captures video, detects faces (YOLOv8), publishes crops to RabbitMQ |
+| [`face-recognition-api`](https://github.com/Putthakun/face-recognition-api) | System of record — employees, cameras, transactions, auth |
+| [`face-recognition-web`](https://github.com/Putthakun/face-recognition-web) | Vue 3 dashboard for admins/supervisors |
+| [`face-recognition-infra`](https://github.com/Putthakun/face-recognition-infrastructure) | Shared SQL Server, Redis, RabbitMQ via Docker Compose |
